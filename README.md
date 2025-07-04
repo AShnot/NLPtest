@@ -31,7 +31,7 @@ NLPtest/
 ├── model/
 │   ├── trained_model.pth   # Сохранённая PyTorch-модель 
 │   └── vectorizer.pkl      # Сохранённый TfidfVectorizer 
-├── classes/target_names.pkl # Список меток классов (будет в git)
+├── classes/target_names.pkl # Список меток классов
 ├── templates/
 │   └── index.html          # HTML-шаблон для Flask
 ├── pyproject.toml          # Poetry-зависимости
