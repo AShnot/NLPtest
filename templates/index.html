@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>PDF Classifier</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+    }
+    .form-box {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    input[type="file"] {
+      margin-bottom: 1.5rem;
+    }
+    .result {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      color: #2a7a2a;
+    }
+  </style>
+  <script>
+    function autoSubmit() {
+      document.getElementById('uploadForm').submit();
+    }
+  </script>
+</head>
+<body>
+  <div class="center-container">
+    <div class="form-box">
+      <h1>Загрузите PDF-документ для классификации</h1>
+      <form id="uploadForm" method="post" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" accept="application/pdf" onchange="autoSubmit()">
+      </form>
+      {% if prediction %}
+        <div class="result">Категория: {{ prediction }}</div>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html> 
