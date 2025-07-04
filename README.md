@@ -56,7 +56,7 @@ cd NLPtest
 poetry install
 poetry run python math_app/text_classifier.py
 ```
-- После обучения появятся файлы `model/trained_model.pth`, `model/vectorizer.pkl`, `math_app/target_names.pkl`.
+- После обучения появятся файлы `model/trained_model.pth`, `model/vectorizer.pkl`, `classes/target_names.pkl`.
 - **Или скачайте готовые веса из репозитория.**
 
 ### 3. Соберите Docker-образ
